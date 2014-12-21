@@ -7,14 +7,13 @@ int push(int s[],int n,int top,int x)
     if(top+1==n)
     {
         printf("Stack is overflow.\n");
-       // exit(1);
+       exit(1);
     }
     else
     {
         top++;
         //element inserted
         s[top]=x;
-        //printf("%d",s[*top]);
     }
 
 return top;
@@ -25,7 +24,7 @@ int pop(int s[],int n,int *top)
     if(*top==-1)
     {
         printf("\nstack is underflow.\n");
-       // exit(1);
+       exit(1);
     }
     else
     {
