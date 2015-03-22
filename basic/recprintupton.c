@@ -1,5 +1,5 @@
 #include<stdio.h>
-//an example of tail recursion .
+
 //print the elemens of an array recursively
 void print(int a[],int start, int last)
 {
