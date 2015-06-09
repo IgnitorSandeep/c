@@ -33,7 +33,7 @@ void xstrcpy(char *t,char *s)
 /**
 this a function to perform strcat(char *t,char *s)
 */
-void xstrcat(char *t,char*s)
+void xstrcat(char *t,char *s)
 {
     while(*t!='\0')
         t++;

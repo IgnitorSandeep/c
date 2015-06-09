@@ -1,8 +1,8 @@
 #include<stdio.h>
 struct btnode {
-    struct node *lc;
+    struct btnode *lc;
     int data;
-    struct node *rc;
+    struct btnode *rc;
 };
 
 /**

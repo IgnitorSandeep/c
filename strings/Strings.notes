@@ -1,0 +1,20 @@
+    Strings:
+    ++++++++
+
+1.  A String constant is a one-dimentional array of characters terminated by a null ('\0') .
+    For Example,
+    char name[] = {'S','A','N','D','E','E','P','\0'};
+
+2.  1 Character occupies 1 byte.
+
+3.  '\0' seems like two character but actually it is a escape character like '\n'.It is called null character.
+
+4.  '\0' and '0' is not same.ASCII value of '\0' is 0 whereas ASCII value of '0' is 48.
+
+5.  Array of characters which is not ending with '\0' is not a String.In fact they are just array of characters.
+
+6.  Short Cut for initialising Strings
+
+    char name[]= "SANDEEP";
+
+    Here c insert '\0' null character automatically.
