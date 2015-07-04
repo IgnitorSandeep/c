@@ -13,14 +13,24 @@ struct DoublyListNode* insertAtBegin(struct DoublyListNode *head,int data) {
     struct DoublyListNode *newNode = (struct DoublyListNode*)malloc(sizeof(struct DoublyListNode));
     newNode->data = data;
     newNode->prev = NULL;
+    newNode->next = head;
+
 
     if(head == NULL) {
         head = newNode;
+
+         return head;
     }
     else {
-        newNode->next = head;
-        head = newNode;
+         head ->prev =newNode;
+         head = newNode;
+
+         return head;
     }
+
+
+
+
 }
 
 struct DoublyListNode* insertAtEnd(struct DoublyListNode *head,int data) {
@@ -196,9 +206,8 @@ int main(void) {
     printf("Length of the list is %d.\n",getCount(head));
 
     head = deleteAtPosition(head,4);
-    printList(head);
+   printList(head);
     printf("Length of the list is %d.\n",getCount(head));
 
     return 0;
 }
-
