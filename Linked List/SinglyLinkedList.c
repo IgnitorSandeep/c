@@ -1,5 +1,5 @@
 #include<stdio.h>
-
+#include<stdlib.h>
 /**
 linked list node
 */
@@ -67,6 +67,23 @@ struct node* reverseList(struct node *head)
     }
     head=q;
     return head;
+}
+
+/**
+Reversing the list recursively
+*/
+struct node* reverserListRecursively(struct node *prev,struct node *curr)
+{
+    if(curr == NULL)
+    {
+        return prev;
+    }
+    else
+    {
+        struct node *temp = curr->next;
+        curr->next = prev;
+        reverserListRecursively(curr,temp);
+    }
 }
 
 /**
@@ -250,9 +267,10 @@ void print(struct node *head)
 {
     while(head!=NULL)
     {
-        printf("%d  ",head->data);
+        printf(" %d--> ",head->data);
         head=head->next;
     }
+    printf("NULL");
 }
 
 /**
@@ -352,20 +370,9 @@ void printDoublyList(struct dnode *head)
     }
 }
 
-
-void append(struct node **start,int num)
-{
-    struct node *temp;
-    temp = (struct node*)malloc(sizeof(struct node));
-    temp->data = num;
-    temp->link = NULL;
-    if(*start==NULL)
-    {
-        start = temp;
-        printf("%u\n",start);
-    }
-}
-
+/**
+Count the number of elements in the list
+*/
 int count(struct node *p)
 {
     int count = 0;
@@ -378,7 +385,7 @@ int count(struct node *p)
         while(p!=NULL)
         {
             count++;
-            p =p->link;
+            p =p->next;
 
         }
     }
@@ -386,6 +393,35 @@ int count(struct node *p)
     return count;
 
 }
+
+/**
+printing linked list recursively in natural order
+*/
+void printList(struct node *head)
+{
+    if(head==NULL)
+        return;
+    else
+    {
+        printf(" %d--> ",head->data);
+        printList(head->next);
+    }
+}
+
+/**
+printing linked list recursively in reverse order
+*/
+void printListReverse(struct node *head)
+{
+    if(head==NULL)
+        return;
+    else
+    {
+        printListReverse(head->next);
+        printf(" <--%d ",head->data);
+    }
+}
+
 
 
 int main(void)
@@ -403,6 +439,21 @@ int main(void)
     printf("First Linked List contains : \n");
     print(first);
     printf("\n\n");
+
+    printf("Printing Linked List recursively in natural order \n");
+    printList(first);
+    printf("NULL\n\n");
+
+    printf("Printing Linked List recursively in reverse\n");
+    printf("NULL");
+    printListReverse(first);
+    printf("\n\n");
+
+    printf("Reversing the linked list recursively \n");
+    first = reverserListRecursively(NULL,first);
+    printList(first);
+    printf("NULL\n\n");
+
 
     //Second Linked List
     struct node *second=NULL;
