@@ -352,6 +352,42 @@ void printDoublyList(struct dnode *head)
     }
 }
 
+
+void append(struct node **start,int num)
+{
+    struct node *temp;
+    temp = (struct node*)malloc(sizeof(struct node));
+    temp->data = num;
+    temp->link = NULL;
+    if(*start==NULL)
+    {
+        start = temp;
+        printf("%u\n",start);
+    }
+}
+
+int count(struct node *p)
+{
+    int count = 0;
+    if(p==NULL)
+    {
+        return (count=0);
+    }
+    else
+    {
+        while(p!=NULL)
+        {
+            count++;
+            p =p->link;
+
+        }
+    }
+
+    return count;
+
+}
+
+
 int main(void)
 {
 

@@ -42,7 +42,9 @@ struct Graph* createGraph(int v)
     */
     graph->adjListArray = (struct AdjList*)malloc(v*sizeof(struct AdjList));
 
-    //initialize adjacency list with null
+    /**
+    initialize adjacency list with null
+    */
     int i;
     for(i=0;i<v;i++)
     {
