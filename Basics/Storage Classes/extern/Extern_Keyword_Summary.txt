@@ -1,0 +1,23 @@
+Extern Keyword
+**************
+
+1.
+**
+
+extern int var;
+
+It means varible is declare but not defined mean memory is not allocated to the var.
+
+var = 10;
+
+So if you will try to change the value of the var then it will give compile time error.
+But in this case suppose there is a c/h file that defines a variable var.it can be run by include it.
+
+2.
+**
+
+But once you write extern as
+
+extern int var=10;
+
+It means it is declared and defined also.

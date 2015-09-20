@@ -1,1 +1,0 @@
-#include main(l ,a,n,d)cha r**a;{for(d=atoi (a[1])/ 10*80- atoi(a[2]) / 5-596;n="@N KA\CLCCGZA AQBEAADAFa ISADJABBA^ \SNLGAQABD AXIMBAACTB ATAHDBAN\Z cEMMCCCCAA hEIJFAEAAA BAfHJE\TBd FLDAANEfDN BPHdBcBBBE A_AL\ H E L L O, W O R L D!"[l++-3];)f or(;n-->64 putchar(!d +++33^ l&1);print f("\n\n\n\ n\t\tFound By:\n\t\t\ t Amit Aru");getc h();}
